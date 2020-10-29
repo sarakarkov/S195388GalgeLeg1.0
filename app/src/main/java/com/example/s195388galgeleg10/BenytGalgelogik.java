@@ -1,4 +1,4 @@
-package galgeleg;
+package com.example.s195388galgeleg10;
 
 public class BenytGalgelogik {
 
@@ -6,7 +6,7 @@ public class BenytGalgelogik {
 
     Galgelogik spil = new Galgelogik();
     spil.startNytSpil();
-
+/*
     try {
       spil.hentOrdFraDr();
     } catch (Exception e) {
@@ -20,7 +20,7 @@ public class BenytGalgelogik {
     } catch (Exception e) {
       e.printStackTrace();
     }
-    */
+
     spil.logStatus();
 
     spil.gætBogstav("e");
