@@ -1,6 +1,8 @@
 package com.example.s195388galgeleg10;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,11 +25,14 @@ public class GameQuickStartActivity extends AppCompatActivity implements OnClick
 
     List<Integer> image = new ArrayList<>();
 
+    int antalForsøg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gamequickstart);
+
+        antalForsøg = 0;
 
         logik.startNytSpil();
         try {
@@ -80,11 +85,18 @@ public class GameQuickStartActivity extends AppCompatActivity implements OnClick
         updatePicture();
 
         if (logik.erSpilletVundet()) {
-            Ordet.setText("Du har vundet");
+            Intent i = new Intent(this, GameWonActivity.class);
+            i.putExtra("tries", antalForsøg);
+            i.putExtra("word", logik.getOrdet());
+            startActivity(i);
         }
         if (logik.erSpilletTabt()) {
-            Ordet.setText("Du har tabt, ordet var: " + logik.getOrdet());
-        }
+                Intent i = new Intent(this, GameLostActivity.class);
+                i.putExtra("tries", antalForsøg);
+                i.putExtra("word", logik.getOrdet());
+                startActivity(i);
+            }
+            antalForsøg++;
     }
 
     private void updatePicture() {
