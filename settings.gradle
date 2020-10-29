@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "S195388GalgeLeg1.0"
