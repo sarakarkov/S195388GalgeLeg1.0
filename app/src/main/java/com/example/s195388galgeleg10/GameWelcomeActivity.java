@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class GameWelcomeActivity extends AppCompatActivity implements View.OnClickListener {
+public class GameWelcomeActivity extends AppCompatActivity implements OnClickListener {
 
-    Button buttonQuickStart, buttonHighScore;
+    Button QuickStart, HighScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,25 +18,22 @@ public class GameWelcomeActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_gamewelcome);
 
         //Find view fra Id
-
-        buttonQuickStart = findViewById(R.id.buttonQuickStart);
-        buttonHighScore = findViewById(R.id.buttonHighScore);
+        QuickStart = findViewById(R.id.QuickStart);
+        HighScore = findViewById(R.id.HighScore);
 
         // On Click Listener
-        buttonQuickStart.setOnClickListener(this);
-        buttonHighScore.setOnClickListener(this);
-
+        QuickStart.setOnClickListener(this);
+        HighScore.setOnClickListener(this);
     }
 
-    public void onClick(View v) {
-
-        if (v == buttonQuickStart) {
+    public void onClick(View v){
+        if (v == QuickStart){
             Intent i = new Intent(this, GameQuickStartActivity.class);
             startActivity(i);
-        } else if (v == buttonHighScore) {
+        }
+        else if (v == HighScore){
             Intent i = new Intent(this, GameHighScoreActivity.class);
             startActivity(i);
-
         }
     }
 }

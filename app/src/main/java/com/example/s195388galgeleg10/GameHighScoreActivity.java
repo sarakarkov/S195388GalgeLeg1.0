@@ -1,8 +1,8 @@
 package com.example.s195388galgeleg10;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
 
 public class GameHighScoreActivity extends AppCompatActivity {
 

@@ -10,64 +10,61 @@
         android:id="@+id/guessButton"
         android:layout_width="103dp"
         android:layout_height="59dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="29dp"
         android:text="Guess"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/GuessWord" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/GuessWord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="71dp"
-        android:layout_marginLeft="71dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginRight="71dp"
-        android:layout_marginBottom="312dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
         android:ems="10"
         android:hint="GuessWord"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/galge" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Ordet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="80dp"
         android:text="Ordet"
         android:textColor="#00BCD4"
         android:textSize="30dp"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/ForkerteBogstaver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="51dp"
-        android:text="Antal Forkerte:"
+        android:layout_marginTop="18dp"
+        android:text="Antal forkerte:"
         android:textColor="#00BCD4"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/Ordet"
+        app:layout_constraintTop_toBottomOf="@+id/Ordet" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/galge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ForkerteBogstaver"
         app:srcCompat="@drawable/galge" />
 </androidx.constraintlayout.widget.ConstraintLayout>

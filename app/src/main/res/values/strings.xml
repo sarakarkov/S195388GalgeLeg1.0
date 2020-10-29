@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">S195388GalgeLeg1.0</string>
+    <string name="QuickStartButton">Quick Start</string>
+    <string name="HighScoreButton">High Score</string>
 </resources>
