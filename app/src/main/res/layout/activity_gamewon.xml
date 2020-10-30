@@ -11,14 +11,17 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
         android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp"
         android:layout_marginBottom="88dp"
         android:background="#81C3E1"
         android:text="Prøv igen"
         android:textColor="#E91E63"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="85dp" />
+        app:layout_constraintStart_toEndOf="@+id/backToMenu" />
 
     <Button
         android:id="@+id/backToMenu"
@@ -26,11 +29,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="85dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
         android:layout_marginBottom="88dp"
         android:background="#81C3E1"
         android:text="Menu"
         android:textColor="#E91E63"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tryAgain"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -56,10 +62,12 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="452dp"
         android:layout_marginEnd="7dp"
+        android:layout_marginBottom="98dp"
         android:ems="10"
         android:hint="Indtast navn til highscore"
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/backToMenu"
         app:layout_constraintEnd_toStartOf="@+id/saveHighScore"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
