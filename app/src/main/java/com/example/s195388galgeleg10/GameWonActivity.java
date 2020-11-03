@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class GameWonActivity extends AppCompatActivity implements View.OnClickListener {
 
+    Galgelogik logik = new Galgelogik();
     Button tryAgain, backToMenu, saveHighScore;
     EditText editTextName;
     TextView textViewTheRightWord, textViewHowManyTries;
@@ -29,8 +30,8 @@ public class GameWonActivity extends AppCompatActivity implements View.OnClickLi
         textViewTheRightWord = findViewById(R.id.textViewTheRightWord);
         textViewHowManyTries = findViewById(R.id.textViewHowManyTries);
 
-        textViewHowManyTries.setText("Antal forsøg: " + getIntent().getExtras().getInt("antal forsøg"));
-        textViewTheRightWord.setText("Ordet var: " + getIntent().getExtras().getString("ordet"));
+        textViewHowManyTries.setText("Antal forsøg: " + logik.getAntalForkerteBogstaver());
+        textViewTheRightWord.setText("Ordet var: " + logik.getOrdet());
 
         // // On Click Listener
 

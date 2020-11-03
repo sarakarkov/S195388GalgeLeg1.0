@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class GameLostActivity extends AppCompatActivity implements View.OnClickListener {
 
+    Galgelogik logik = new Galgelogik();
     Button backToMenu, tryAgain;
     TextView textViewTheRightWord2;
 
@@ -25,7 +26,8 @@ public class GameLostActivity extends AppCompatActivity implements View.OnClickL
         tryAgain = findViewById(R.id.tryAgain);
         textViewTheRightWord2 = findViewById(R.id.textViewTheRightWord2);
 
-        textViewTheRightWord2.setText("Ordet var: " + getIntent().getExtras().getString("word"));
+        textViewTheRightWord2.setText("Ordet var: " + logik.getOrdet());
+
 
         //On click
 
