@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 public class GameLostActivity extends AppCompatActivity implements View.OnClickListener {
 
     Galgelogik logik = new Galgelogik();
     Button backToMenu, tryAgain;
     TextView textViewTheRightWord2;
-
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,8 @@ public class GameLostActivity extends AppCompatActivity implements View.OnClickL
         textViewTheRightWord2 = findViewById(R.id.textViewTheRightWord2);
 
         textViewTheRightWord2.setText("Ordet var: " + getIntent().getExtras().getString("word"));
-
+        mediaPlayer = MediaPlayer.create(this,R.raw.lost);
+        mediaPlayer.start();
 
         //On click
 
