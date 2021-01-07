@@ -31,7 +31,7 @@ public class GameWonActivity extends AppCompatActivity implements View.OnClickLi
         textViewHowManyTries = findViewById(R.id.textViewHowManyTries);
 
         textViewHowManyTries.setText("Antal forsøg: " + getIntent().getExtras().getInt("tries"));
-        textViewTheRightWord.setText("Ordet var: " + logik.getOrdet());
+        textViewTheRightWord.setText("Ordet var: " + getIntent().getExtras().getString("word"));
 
         // // On Click Listener
 
