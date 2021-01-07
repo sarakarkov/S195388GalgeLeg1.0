@@ -26,7 +26,7 @@ public class GameLostActivity extends AppCompatActivity implements View.OnClickL
         tryAgain = findViewById(R.id.tryAgain);
         textViewTheRightWord2 = findViewById(R.id.textViewTheRightWord2);
 
-        textViewTheRightWord2.setText("Ordet var: " + logik.getOrdet());
+        textViewTheRightWord2.setText("Ordet var: " + getIntent().getExtras().getString("word"));
 
 
         //On click
