@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 public class GameWonActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -15,6 +16,7 @@ public class GameWonActivity extends AppCompatActivity implements View.OnClickLi
     Button tryAgain, backToMenu, saveHighScore;
     EditText editTextName;
     TextView textViewTheRightWord, textViewHowManyTries;
+    MediaPlayer mediaPlayer;
 
 
     @Override
@@ -32,6 +34,9 @@ public class GameWonActivity extends AppCompatActivity implements View.OnClickLi
 
         textViewHowManyTries.setText("Antal forsøg: " + getIntent().getExtras().getInt("tries"));
         textViewTheRightWord.setText("Ordet var: " + getIntent().getExtras().getString("word"));
+
+        mediaPlayer = MediaPlayer.create(this,R.raw.won_sound);
+        mediaPlayer.start();
 
         // // On Click Listener
 
