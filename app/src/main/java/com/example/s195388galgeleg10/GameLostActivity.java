@@ -44,9 +44,11 @@ public class GameLostActivity extends AppCompatActivity implements View.OnClickL
         if (v == tryAgain) {
             Intent i = new Intent(this, GameQuickStartActivity.class);
             startActivity(i);
+            mediaPlayer.stop();
         } else if (v == backToMenu) {
             Intent i = new Intent(this, GameWelcomeActivity.class);
             startActivity(i);
+            mediaPlayer.stop();
 
         }
     }

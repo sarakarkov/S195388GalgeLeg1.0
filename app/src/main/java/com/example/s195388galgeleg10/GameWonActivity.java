@@ -56,7 +56,7 @@ public class GameWonActivity extends AppCompatActivity implements View.OnClickLi
             Intent i = new Intent(this, GameWelcomeActivity.class);
             startActivity(i);
         } else if (v == saveHighScore) {
-            Intent i = new Intent(this, GameHighScoreActivity.class);
+            Intent i = new Intent(this, HighScoreActivity.class);
             startActivity(i);
         }
     }

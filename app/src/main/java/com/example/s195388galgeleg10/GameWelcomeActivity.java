@@ -32,7 +32,7 @@ public class GameWelcomeActivity extends AppCompatActivity implements OnClickLis
             startActivity(i);
         }
         else if (v == HighScore){
-            Intent i = new Intent(this, GameHighScoreActivity.class);
+            Intent i = new Intent(this, HighScoreActivity.class);
             startActivity(i);
         }
     }
