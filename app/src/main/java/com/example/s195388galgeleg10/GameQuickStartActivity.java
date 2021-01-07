@@ -36,7 +36,7 @@ public class GameQuickStartActivity extends AppCompatActivity implements OnClick
 
         logik.startNytSpil();
         try {
-            logik.hentOrdFraRegneark("12");
+            logik.hentOrdFraDr();
         } catch (Exception e) {
             e.printStackTrace();
         }

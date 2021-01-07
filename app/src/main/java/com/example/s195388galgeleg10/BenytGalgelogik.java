@@ -6,21 +6,23 @@ public class BenytGalgelogik {
 
     Galgelogik spil = new Galgelogik();
     spil.startNytSpil();
-/*
+
     try {
       spil.hentOrdFraDr();
     } catch (Exception e) {
       e.printStackTrace();
     }
-    */
 
 
+/*
     try {
       spil.hentOrdFraRegneark("12");
     } catch (Exception e) {
       e.printStackTrace();
     }
 
+
+ */
     spil.logStatus();
 
     spil.gætBogstav("e");
